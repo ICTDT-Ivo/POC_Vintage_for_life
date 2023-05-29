@@ -25,6 +25,8 @@ function openCon()
 <header>
 </header>
 <div><h1> <?php echo "TEST POC :)" ?></h1></div>
+    
+    <?php
     $resultaat = $conn->query("SELECT ID, VALUE
                                 FROM POC_TABlE
                                );
@@ -35,6 +37,7 @@ function openCon()
                         <td> " . $array["ID"] . "</td>
                         <td> " . $array["VALUE"] . "   </td>
                     </tr>");
+     ?>
 <footer >
 </footer>
 </body>
