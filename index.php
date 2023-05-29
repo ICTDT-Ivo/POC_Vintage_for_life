@@ -25,6 +25,16 @@ function openCon()
 <header>
 </header>
 <div><h1> <?php echo "TEST POC :)" ?></h1></div>
+    $resultaat = $conn->query("SELECT ID, VALUE
+                                FROM POC_TABlE
+                               );
+    $items = $resultaat->fetch_assoc()
+    $array[] = $items;
+    print("
+                    <tr>
+                        <td> " . $array["ID"] . "</td>
+                        <td> " . $array["VALUE"] . "   </td>
+                    </tr>");
 <footer >
 </footer>
 </body>
