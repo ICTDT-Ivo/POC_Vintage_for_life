@@ -16,26 +16,27 @@ function openCon()
 <html lang="nl">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-   
+    <meta name="viewport"/>
+
     <title>Vintage for life POC</title>
-  
+
 </head>
 <body>
 <header>
 </header>
 <div><h1> <?php echo "TEST POC :)" ?></h1></div>
-    
+
     <?php
+    $conn = openCon();
     $resultaat = $conn->query("SELECT ID, VALUE
                                 FROM POC_TABlE
-                               );
-    $items = $resultaat->fetch_assoc()
+                               ");
+    $items = $resultaat->fetch_assoc();
     $array[] = $items;
     print("
                     <tr>
-                        <td> " . $array["ID"] . "</td>
-                        <td> " . $array["VALUE"] . "   </td>
+                        <td> " . $array["klantnummer"] . "</td>
+                        <td> " . $array["bestelnummer"] . "   </td> 
                     </tr>");
      ?>
 <footer >
